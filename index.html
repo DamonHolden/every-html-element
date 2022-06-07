@@ -1,16 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <base target="_blank" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Every HTML Element</title>
   </head>
   <body>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background-color: whitesmoke;
+      }
+    </style>
     <h1>Every HTML Element</h1>
     <p>
       This page should utilize every non-deprecated html element currently
       within standards.
     </p>
+    <hr />
+    <article>
+      <h2>This is an Article:</h2>
+      <p>
+        While not visually special, article elements should be used to wrap
+        content that can be reused, like user comments, product cards, or a
+        widget.
+      </p>
+      <p>
+        Each article element should include a heading element as its first
+        child.
+      </p>
+      <p>If reasonable, articles can also be nested.</p>
+    </article>
+    <hr />
+    <aside>
+      <p>
+        This is a p element wrapped in an aside element. While visually
+        indistinguishable in most cases, an aside element represents content
+        that is only indirectly related to the documents main content.
+      </p>
+      <p>
+        Asides are commonly styled as sidebars or call-out boxes to distinguish
+        themselves from other content in the document.
+      </p>
+    </aside>
+    <hr />
+    <address>
+      <p>Contact the author of this page:</p>
+      <a href="mailto:damonh003@gmail.com">damonh003@gmail.com</a><br />
+      <a href="tel:07903699493">07903699493</a>
+    </address>
+
+    <!-- testing script -->
+    <script>
+      const elements = [
+        'html',
+        'base',
+        'head',
+        'link',
+        'meta',
+        'style',
+        'title',
+        'body',
+        'address',
+        'article',
+        'aside',
+      ];
+
+      for (element of elements) {
+        console.log(
+          `${element} elements: ${
+            document.getElementsByTagName(element).length
+          }`
+        );
+      }
+    </script>
   </body>
 </html>
