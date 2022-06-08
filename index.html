@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <base target="_blank" />
+    <base target="_self" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,8 +16,8 @@
       }
     </style>
   </head>
-  <body>
-    <header style="margin-bottom: 2000px">
+  <body id="body">
+    <header>
       <h1>Every HTML Element</h1>
       <p>
         This page should utilize every non-deprecated html element currently
@@ -80,6 +80,313 @@
         </p>
       </aside>
       <hr />
+      <section>
+        <h2>The blockquote element</h2>
+        <p>
+          The following text is contained within a blockquote element. I'll let
+          Mozilla do the explaining for this one.
+        </p>
+        <blockquote
+          cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+        >
+          <p>
+            The blockquote HTML element indicates that the enclosed text is an
+            extended quotation. Usually, this is rendered visually by
+            indentation (see Notes for how to change it). A URL for the source
+            of the quotation may be given using the cite attribute, while a text
+            representation of the source can be given using the cite element.
+          </p>
+        </blockquote>
+        <p>
+          By the way, that cite attribute isn't purposed to provide any visual
+          content to the end-user. Instead, th URL value of the cite attribute
+          is intended to be used by scripts as metadata for some other purpose,
+          though conceptually the URL provided by the cite attribute could be
+          used by the webpage to render something on the screen.
+        </p>
+      </section>
+      <hr />
+      <div>
+        <h2>The div element</h2>
+        <p>
+          The prior h1 tag and this text is all contained within a div element.
+          This element is effectively as generic as an element can get, as it
+          doesn't represent anything specific other than simply a divider for
+          page content.
+        </p>
+        <p>
+          While a div element could be (and is commonly) seen as a flexible
+          element, as it could be used as a segmentation element in almost any
+          scenario, it should really only be used when no other element is
+          appropriate. This is noted in the MDN documentation as well as on the
+          WHATWG's HTML spec:
+        </p>
+        <blockquote
+          cite="https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element"
+        >
+          <p>
+            Authors are strongly encouraged to view the div element as an
+            element of last resort, for when no other element is suitable. Use
+            of more appropriate elements instead of the div element leads to
+            better accessibility for readers and easier maintainability for
+            authors.
+          </p>
+        </blockquote>
+        <p>
+          A div's representation of a purely generic element also means that
+          there is no styling that is applied to the element by default, other
+          than that in most browsers, a div will be new-lined by default.
+        </p>
+      </div>
+      <hr />
+      <section>
+        <h2>The dl, dt, and dd elements</h2>
+        <p>element definitions:</p>
+        <dl>
+          <dt>dl</dt>
+          <dd>
+            represents a description list, enclosing a list of groups of terms
+            and descriptions. Common use cases are glossaries or to display
+            metadata.
+          </dd>
+        </dl>
+        <dl>
+          <dt>dt</dt>
+          <dd>
+            element used when specifying a term in a description/definition
+            list.
+          </dd>
+        </dl>
+        <dl>
+          <dt>dd</dt>
+          <dd>
+            element that'a contents provide the description, definition, or
+            value for the preceding term.
+          </dd>
+        </dl>
+        <p>
+          While the dl, dt, and dd elements are fairly straightforward to
+          understand, terms and descriptions do not have to be one-to-one pairs.
+          It's possible to define a single dt with multiple dd's, multiple dt's
+          with a single dd, or even multiple dt's with multiple dd's.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>the figure and figcaption elements</h2>
+        <p>
+          the following picture and caption is enclosed within a figure element.
+          The caption below the picture, is contained within a figcaption
+          element, if you can believe that.
+        </p>
+        <figure>
+          <img
+            width="400"
+            src="https://external-preview.redd.it/_-tICf4k5zN9Rz1NkQE3Fp3N2_t4R_SAGIFFwgZz9MM.png?format=pjpg&auto=webp&s=2a5c7d3c83c42e904771b99b44917554c3564cfb"
+            alt="the perfect duck"
+          />
+          <figcaption>A duck that is perfect</figcaption>
+        </figure>
+
+        <p>
+          The figure element itself represents self-contained content, with an
+          optional caption (implemented using figcaption). Typically the actual
+          content of the figure will be some kind of image, diagram,
+          code-snippet, etc.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The hr element</h2>
+        <p>
+          The hr element is thematic-break between elements. This could be a
+          shift of topic in a section, for example.
+        </p>
+        <figure>
+          <hr />
+          <figcaption>A hr element, as styled in this page</figcaption>
+        </figure>
+        <p>
+          As far a specification goes, this element should really be used to
+          section paragraph level elements. While the hr element may, by
+          default, visually render a horizontal line and spacing, it should be
+          used logically. A demonstration of using this element in technically
+          the wrong way is within this very document. each section of this page
+          is separated using the hr element, mainly for its visual rendering,
+          but this is really going against HTML spec, as its not being used as a
+          thematic-break between paragraph-level elements.
+        </p>
+        <p>
+          While the usage of hr in this document suffices for the purpose of its
+          usage here, as far as best-practice is concerned, you should aim to
+          achieve the spacing and horizontal line of the hr element with CSS, as
+          opposed to using the hr element itself to achieve this.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The li, ol, ul, and menu elements</h2>
+        <h3>The li element</h3>
+        <p>
+          The li element represents an item in a list and must be the child of
+          one of the following three elements:
+        </p>
+        <ul>
+          <li>an ol element</li>
+          <li>a ul element</li>
+          <li>a menu element</li>
+        </ul>
+        <h3>The ol element</h3>
+        <p>
+          An ol element should be used for a list if the order is meaningful,
+          like steps in a recipe. For example:
+        </p>
+        <ol start="1">
+          <li>Pick up phone.</li>
+          <li>Call takeaway.</li>
+          <li>Order a pizza.</li>
+          <li>Wait for delivery.</li>
+          <li>Eat pizza.</li>
+        </ol>
+        <h3>The ul element</h3>
+        <p>
+          a ul element should be used for a list if the order is meaningless,
+          like a list of individuals. For example:
+        </p>
+        <ul>
+          <li>Boba Fett</li>
+          <li>Jin Darin</li>
+          <li>Grogu</li>
+          <li>General Grievous</li>
+          <li>Darth Vader</li>
+        </ul>
+        <h3>The menu element</h3>
+        <p>
+          similarly to the ul element, the menu element represents a list of
+          unordered items. The key difference between the two is while a ul is
+          intended for only displaying those items, a menu is used when those
+          items also include user interaction. For example, a toolbar:
+        </p>
+        <menu>
+          <li>
+            <button
+              onclick="document.getElementById('body').style.backgroundColor = 'rgb(255, 255, 97)';"
+            >
+              Yellow Background
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="document.getElementById('body').style.backgroundColor = 'rgb(102, 231, 156)'"
+            >
+              Green Background
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="document.getElementById('body').style.backgroundColor = ' rgb(255, 160, 242)'"
+            >
+              Pink Background
+            </button>
+          </li>
+        </menu>
+      </section>
+      <hr />
+      <section>
+        <h2>The p element</h2>
+        <p>
+          The p element represents a paragraph. while you may typically think
+          this would be limited to a block of text, in HTML, a paragraph can be
+          any structural grouping of related content. This is important to
+          remember.
+        </p>
+        <figure>
+          <p style="border-style: solid">
+            Most ducks are cute:
+            <img
+              src="data:image/jpeg;base64,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"
+              alt="A cute duck."
+            />
+            <button
+              onclick="alert('The cute duck graciously accepts your respect.')"
+            >
+              Pay respects to the cute duck
+            </button>
+          </p>
+          <figcaption>
+            An example of a p element containing text, a button, and an image.
+          </figcaption>
+        </figure>
+        <p>
+          Almost all text groups in this document are p elements, which by
+          default provides spacing above and below those blocks.
+        </p>
+        <p>
+          While an empty p element will render empty space, you shouldn't use a
+          p element in this way, not only because it goes against standards, but
+          also for accessibility concerns. For example, if a reader uses
+          screen-reading technology, that technology may announce an empty p
+          element, but there will be no content to read, resulting in a
+          confusing experience.
+        </p>
+      </section>
+      <hr />
+      <h2>The pre element</h2>
+      <p>
+        The p element represents preformatted text, which is to be presented
+        exactly as written in the HTML file it is sourced from, including any
+        white space. Typically this element is rendered monospace font by
+        default.
+      </p>
+      <figure>
+        <pre role="img" aria-label="ASCII DUCK">
+    
+                               ,-""   `.
+                             ,'  _   e )`-._
+                            /  ,' `-._&#60;.===-'
+                           /  /
+                          /  ;
+              _.--.__    /   ;
+ (`._    _.-""       "--'    |
+ &#60;_  &#96;&#45;&#34;&#34;                     \
+ &#60;`-                          :
+   (__   &#60;__.                  ;
+     `-.   '-.__.      _.'    /
+        \      `-.__,-'    _,'
+         `._    ,    /__,-'
+         &#34;&#34;._\__,'&#60; &#60;____
+                 | |  `----.`.
+                 | |        \ `.
+                 ; |___      \-``
+                 \   --&#60;
+                  `.`.&#60;
+                    `-'</pre
+        >
+        <figcaption>An ASCII duck within a pre element.</figcaption>
+      </figure>
+      <p>
+        The tricky aspect of implementing a pre element is character escaping.
+        Symbols desired to be placed inside a pre element that are interpreted
+        as HTML syntax will need to be escaped. For example, the '&#60;' symbold
+        will need to be replaced with '&#38;#60;' for that particular symbol to
+        be interpreted as text. This consideration is not exclusive to the pre
+        element, but is most commonly ran into when writing one.
+      </p>
+      <p>
+        A useful
+        <a href="https://www.amp-what.com/"
+          >web-tool for looking-up symbols and their Html escapes can be found
+          here</a
+        >.
+      </p>
+      <p>
+        While pre elements are an effective way to display text-based images,
+        its important for accessibility to ensure that the pre element is
+        considered an image by the browser. for example a plain pre element with
+        an ASCII picture may be read by a screen-reader as actual text, which
+        would be a pretty obnoxious experience.
+      </p>
+      <hr />
     </main>
     <footer>
       <p>This is a p element within a footer element</p>
@@ -115,6 +422,20 @@
         'main',
         'nav',
         'section',
+        'blockquote',
+        'dd',
+        'div',
+        'dl',
+        'dt',
+        'figcaption',
+        'figure',
+        'hr',
+        'li',
+        'menu',
+        'ol',
+        'p',
+        'pre',
+        'ul',
       ];
 
       for (element of elements) {
