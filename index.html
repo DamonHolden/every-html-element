@@ -338,8 +338,9 @@
         white space. Typically this element is rendered monospace font by
         default.
       </p>
-      <figure>
-        <pre role="img" aria-label="ASCII DUCK">
+      <section>
+        <figure>
+          <pre role="img" aria-label="ASCII DUCK">
     
                                ,-""   `.
                              ,'  _   e )`-._
@@ -361,31 +362,45 @@
                  \   --&#60;
                   `.`.&#60;
                     `-'</pre
-        >
-        <figcaption>An ASCII duck within a pre element.</figcaption>
-      </figure>
-      <p>
-        The tricky aspect of implementing a pre element is character escaping.
-        Symbols desired to be placed inside a pre element that are interpreted
-        as HTML syntax will need to be escaped. For example, the '&#60;' symbold
-        will need to be replaced with '&#38;#60;' for that particular symbol to
-        be interpreted as text. This consideration is not exclusive to the pre
-        element, but is most commonly ran into when writing one.
-      </p>
-      <p>
-        A useful
-        <a href="https://www.amp-what.com/"
-          >web-tool for looking-up symbols and their Html escapes can be found
-          here</a
-        >.
-      </p>
-      <p>
-        While pre elements are an effective way to display text-based images,
-        its important for accessibility to ensure that the pre element is
-        considered an image by the browser. for example a plain pre element with
-        an ASCII picture may be read by a screen-reader as actual text, which
-        would be a pretty obnoxious experience.
-      </p>
+          >
+          <figcaption>An ASCII duck within a pre element.</figcaption>
+        </figure>
+        <p>
+          The tricky aspect of implementing a pre element is character escaping.
+          Symbols desired to be placed inside a pre element that are interpreted
+          as HTML syntax will need to be escaped. For example, the '&#60;'
+          symbol will need to be replaced with '&#38;#60;' for that particular
+          symbol to be interpreted as text. This consideration is not exclusive
+          to the pre element, but is most commonly ran into when writing one.
+        </p>
+        <p>
+          A useful
+          <a href="https://www.amp-what.com/"
+            >web-tool for looking-up symbols and their Html escapes can be found
+            here</a
+          >.
+        </p>
+        <p>
+          While pre elements are an effective way to display text-based images,
+          its important for accessibility to ensure that the pre element is
+          considered an image by the browser. for example a plain pre element
+          with an ASCII picture may be read by a screen-reader as actual text,
+          which would be a pretty obnoxious experience.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The a element</h2>
+        <p>
+          The a element, along with the href attribute, creates a hyperlink to
+          anything that URL can address.
+        </p>
+        <p>
+          The contents of an a element should clearly indicate the links
+          destination. As a side-note, the link created by an a tag can also be
+          actuated by hovering over the link and pressing the enter key.
+        </p>
+      </section>
       <hr />
     </main>
     <footer>
@@ -436,6 +451,7 @@
         'p',
         'pre',
         'ul',
+        'a',
       ];
 
       for (element of elements) {
