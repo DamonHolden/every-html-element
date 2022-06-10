@@ -8,9 +8,17 @@
     <title>Every HTML Element</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* * {
-        font-family: monospace;
-      } */
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      a {
+        font-family: 'Roboto', sans-serif;
+      }
       body {
         background-color: rgb(255, 255, 97);
       }
@@ -19,6 +27,7 @@
       }
       figure {
         border-style: dotted;
+        padding: 0px 10px 0px 10px;
       }
     </style>
   </head>
@@ -745,6 +754,179 @@
           <abbr title="Cascading Style Sheets">CSS</abbr> to achieve this.
         </p>
       </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;i&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;i&#62;</code></dfn> element represents text that
+          is set of from the normal text.
+        </p>
+        <figure>
+          <p>
+            I saw this piece of code someone wrote and thought <i>Horror</i>.
+          </p>
+          <figcaption>
+            An example of the <code>&#60;i&#62;</code> element
+          </figcaption>
+        </figure>
+        <p>
+          historically, the <code>&#60;i&#62;</code> element has been used as a
+          element to purely italicise text, but developers should use it for its
+          current semantic purpose.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;kbd&#62;</code> element.</h2>
+        <p>
+          The <dfn><code>&#60;kbd&#62;</code></dfn> element is used to represent
+          text denoting user keyboard , or any other text entry device.
+        </p>
+        <figure>
+          <p>
+            Press
+            <kbd><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd></kbd> to
+            log off the computer.
+          </p>
+          <figcaption>
+            An example of the <code>&#60;kbd&#62;</code> element.
+          </figcaption>
+        </figure>
+        <p>
+          By default, most browsers will render <code>&#60;kbd&#62;</code> text
+          in monospace, but this can be changed with
+          <abbr title="Cascading Style Sheets">CSS</abbr>.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;mark&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;mark&#62;</code></dfn> element represents text
+          which is marked for reference purposes, due to its relevance in
+          another context.
+        </p>
+        <figure>
+          <blockquote>
+            <ul>
+              <li>
+                Be sure the text in question is not actually more appropriately
+                marked up with another element.
+              </li>
+              <ul>
+                <li>
+                  Use <code>&#60;em&#62;</code> to indicate stress emphasis.
+                </li>
+                <li>
+                  Use <code>&#60;strong&#62;</code> to indicate importance,
+                  seriousness, or urgency.
+                </li>
+                <li>
+                  <mark
+                    >Use <code>&#60;mark&#62;</code> to indicate
+                    relevance.</mark
+                  >
+                </li>
+                <li>
+                  Use <code>&#60;cite&#62;</code> to mark up the name of a work,
+                  such as a book, play, or song.
+                </li>
+                <li>
+                  Use <code>&#60;dfn&#62;</code> to mark up the defining
+                  instance of a term.
+                </li>
+              </ul>
+            </ul>
+          </blockquote>
+          <figcaption>
+            The <code>&#60;mark&#62;</code> element being used for the context
+            of this section.
+          </figcaption>
+        </figure>
+        <p>
+          While the <code>&#60;mark&#62;</code> element is typically used to
+          mark the the relevancy of text of a document in new context, it can
+          also be used to mark parts of a document relating to a search result.
+        </p>
+        <p>
+          As is the case with many other elements, <em>do not</em> use the
+          <code>&#60;mark&#62;</code> purely for its styling purposes. While the
+          element does, by default in most browsers, render the marked text as
+          if it were highlighted with a yellow highlighter, if you wish to
+          purely achieve this visual output, use
+          <abbr title="Cascading Style Sheets">CSS</abbr>.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;q&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;q&#62;</code></dfn> element is used to indicate
+          enclosed text as an inline quote.
+        </p>
+        <figure>
+          <p>
+            The Mandalorian placed the bounty holocron on the tables and said
+            calmly:
+            <q cite="https://www.starwars.com/databank/the-mandalorian"
+              >I can bring you in warm, or I can bring you in cold.</q
+            >
+          </p>
+          <figcaption>An example use-case of the q element.</figcaption>
+        </figure>
+        <p>
+          Ensure to use the <code>&#60;q&#62;</code> element for inline quotes
+          only. For Long quotes, use the
+          <code>&#60;blockquote&#62;</code> element.
+        </p>
+        <p>
+          By default, most browsers will render quote marks round the contents
+          of a <code>&#60;q&#62;</code> element.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>
+          The <code>&#60;ruby&#62;</code>, <code>&#60;rp&#62;</code>, and
+          <code>&#60;rt&#62;</code> elements
+        </h2>
+        <h3>The <code>&#60;ruby&#62;</code> element</h3>
+        <p>
+          the <dfn><code>&#60;ruby&#62;</code></dfn> element represents
+          annotations rendered with base text.
+        </p>
+        <figure>
+          <ruby>俳句<rp>(</rp><rt>haiku</rt><rp>)</rp></ruby>
+          <figcaption>
+            A <code>&#60;ruby&#62;</code> element use-case example
+          </figcaption>
+        </figure>
+        <p>
+          The <code>&#60;ruby&#62;</code> element is commonly used for showing
+          the pronunciation of east east-asian characters. However, you could
+          conceptually use it to annotate other kinds of text.
+        </p>
+        <h3>The <code>&#60;rt&#62;</code> element</h3>
+        <p>
+          The <dfn><code>&#60;rt&#62;</code></dfn> element the annotation of a
+          <code>&#60;ruby&#62;</code> element.
+        </p>
+        <p>
+          As a component element of the <code>&#60;ruby&#62;</code>, any
+          instance of an <code>&#60;rt&#62;</code> element <em>must</em> be
+          contained inside a <code>&#60;ruby&#62;</code> element.
+        </p>
+        <h3>The <code>&#60;rp&#62;</code> element</h3>
+        <p>
+          The <dfn><code>&#60;rp&#62;</code></dfn> element is used to provide
+          fallback parentheses for browsers that do not support the display of
+          ruby annotations using the <code>&#60;ruby&#62;</code> element.
+        </p>
+        <p>
+          Typically when being used, the two of these elements would be used for
+          opening and closing parentheses, but alternatives are allowed.
+        </p>
+      </section>
     </main>
     <hr />
     <footer>
@@ -755,66 +937,6 @@
         <a href="tel:07903699493">07903699493</a>
       </address>
     </footer>
-
-    <script>
-      const elements = [
-        'html',
-        'base',
-        'head',
-        'link',
-        'meta',
-        'style',
-        'title',
-        'body',
-        'address',
-        'article',
-        'aside',
-        'footer',
-        'header',
-        'h1',
-        'h2',
-        'h3',
-        'h4',
-        'h5',
-        'h6',
-        'main',
-        'nav',
-        'section',
-        'blockquote',
-        'dd',
-        'div',
-        'dl',
-        'dt',
-        'figcaption',
-        'figure',
-        'hr',
-        'li',
-        'menu',
-        'ol',
-        'p',
-        'pre',
-        'ul',
-        'a',
-        'abbr',
-        'b',
-        'bdi',
-        'bdo',
-        'br',
-        'cite',
-        'code',
-        'data',
-        'dfn',
-        'em',
-        'i',
-      ];
-
-      for (element of elements) {
-        console.log(
-          `${element} elements: ${
-            document.getElementsByTagName(element).length
-          }`
-        );
-      }
-    </script>
+    <script type="text/javascript" src="/element-test.js"></script>
   </body>
 </html>
