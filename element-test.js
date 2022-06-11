@@ -53,6 +53,17 @@ const elements = [
   'rp',
   'rt',
   'ruby',
+  's',
+  'samp',
+  'small',
+  'span',
+  'strong',
+  'sub',
+  'sup',
+  'time',
+  'u',
+  'var',
+  'wbr',
 ];
 
 for (element of elements) {

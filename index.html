@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <base target="_self" />
+    <base target="_self"/>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Every HTML Element</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
       p,
@@ -24,10 +27,19 @@
       }
       hr {
         border-style: solid;
+        color: black;
       }
-      figure {
+      /* figure {
         border-style: dotted;
         padding: 0px 10px 0px 10px;
+      } */
+      span.status {
+        color: red;
+        font-size: smaller;
+        vertical-align: top;
+      }
+      u.spelling {
+        text-decoration: red wavy underline;
       }
     </style>
   </head>
@@ -927,6 +939,314 @@
           opening and closing parentheses, but alternatives are allowed.
         </p>
       </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;s&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;s&#62;</code></dfn> element is used to represent
+          things that are no longer relevant/accurate.
+        </p>
+        <figure>
+          <p><s>Tickets available now</s></p>
+          <p>SOLD OUT!</p>
+          <figcaption>
+            An <code>&#60;s&#62;</code> element example use-case
+          </figcaption>
+        </figure>
+        <p>
+          While a similar use-case, the <code>&#60;s&#62;</code> element
+          shouldn't be used to indicate document edits. The
+          <code>&#60;del&#62;</code> and <code>&#60;ins&#62;</code> elements are
+          purposed for this.
+        </p>
+        <p>
+          Typically, browsers will render a strikethrough line through the
+          contents of a <code>&#60;s&#62;</code> element.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;samp&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;samp&#62;</code></dfn> element is used to enclose
+          inline text which represents sample output from a computer program.
+        </p>
+        <figure>
+          <p>
+            When this page loads, for each element included on the page,
+            <samp>(element name) elements: (number of elements)</samp> will be
+            logged to the console.
+          </p>
+          <figcaption>
+            An example use-case for the <code>&#60;samp&#62;</code> element.
+          </figcaption>
+        </figure>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;small&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;small&#62;</code></dfn> element is used to
+          represent side-comments and small print.
+        </p>
+        <figure>
+          <p>
+            Smartphone: £1000
+            <small>(includes <abbr title="Value Added Tax">VAT</abbr>)</small>
+          </p>
+          <figcaption>
+            An example use-case of the <code>&#60;small&#62;</code> element.
+          </figcaption>
+        </figure>
+        <p>
+          While <abbr title="Hypertext Markup Language">HTML</abbr> standards
+          are fairly loose on how the <code>&#60;small&#62;</code> element can
+          be used, you should still aim to use it semantically, and not purely
+          for it's inherent styling.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;span&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;span&#62;</code></dfn> element is a generic inline
+          container for content, which semantically does not inherently
+          represent anything.
+        </p>
+        <figure>
+          <p>Some new website feature <span class="status">BETA</span></p>
+          <figcaption>
+            an example use-case for the <code>&#60;span&#62;</code> element.
+          </figcaption>
+        </figure>
+        <p>
+          Being generic, the <code>&#60;span&#62;</code> element should be used
+          only be used when no other semantic element is better suited. In this
+          way, <code>&#60;span&#62;</code> is very similar in purpose to the
+          <code>&#60;div&#62;</code> element, the difference being
+          <code>&#60;span&#62;</code> is an inline element and
+          <code>&#60;div&#62;</code> is a block-level element.
+        </p>
+        <p>
+          Typically, the <code>&#60;span&#62;</code> element is used when groups
+          of elements share the same styling or attributes.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;strong&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;strong&#62;</code></dfn> element indicates that
+          it's contents have strong importance.
+        </p>
+        <figure>
+          <p>
+            First of all, keep him out of the light, he hates bright light,
+            especially sunlight, it’ll kill him. Second, don’t give him any
+            water, not even to drink. But the most important rule, the rule you
+            can never forget, no matter how much he cries, no matter how much he
+            begs, <strong>never feed him after midnight.</strong>
+          </p>
+          <figcaption>
+            A <code>&#60;strong&#62;</code> element use-case example
+          </figcaption>
+        </figure>
+        <p>
+          while the <code>&#60;strong&#62;</code> element renders typically
+          renders it's contents in boldface, but this should not be the sole
+          reason to justify the element's use. Remember to use
+          <code>&#60;strong&#62;</code> semantically.
+        </p>
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"
+            >MDN's documentation on the <code>&#60;strong&#62;</code> element</a
+          >
+          includes some really good commentary on how the
+          <code>&#60;strong&#62;</code> element fits in with other similar
+          semantic elements. Its important to remember that
+          <strong>no two elements in HTML fulfil the same purpose</strong>, they
+          all have a purpose.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;sub&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;sub&#62;</code></dfn> element specifies text which
+          should be displayed as subscript.
+        </p>
+        <figure>
+          <p>
+            I do love a bit of the C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub
+              >2</sub
+            >
+            molecule, also known as caffeine.
+          </p>
+          <figcaption>
+            A <code>&#60;sub&#62;</code> element use-case example
+          </figcaption>
+        </figure>
+        <p>
+          The <code>&#60;sub&#62;</code> element should only be used to change
+          the position of text with a typographical convention or standard to
+          comply to. In other words, if you just want the styling of this
+          element, use CSS instead.
+        </p>
+        <p>
+          Appropriate uses for the <code>&#60;sub&#62;</code> element include:
+        </p>
+        <ul>
+          <li>
+            Footnote numbers (According to the computations by Nakamura,
+            Johnson, and Mason<sub>1</sub> this... )
+          </li>
+          <li>Atom numbers in chemical formulas (H<sub>2</sub>O)</li>
+          <li>
+            Mathematical variable numbers (<var>x<sub>1</sub></var> ...
+            <var>x<sub>n</sub></var
+            >)
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;sup&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;sup&#62;</code></dfn> element specifies text which
+          should be displayed as superscript.
+        </p>
+        <figure>
+          <p>
+            Pythagorean Theorem: <var>a<sup>2</sup></var> +
+            <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
+          </p>
+          <figcaption>
+            A <code>&#60;sup&#62;</code> element use-case example
+          </figcaption>
+        </figure>
+        <p>
+          The <code>&#60;sup&#62;</code> element should only be used to change
+          the position of text with a typographical convention or standard to
+          comply to. In other words, if you just want the styling of this
+          element, use CSS instead.
+        </p>
+        <p>
+          Appropriate uses for the <code>&#60;sup&#62;</code> element include:
+        </p>
+        <ul>
+          <li>
+            Exponents (<var>x<sup>3</sup></var
+            >)
+          </li>
+          <li>Superior lettering (M<sup>lle</sup>)</li>
+          <li>Ordinal numbers (3<sup>rd</sup>)</li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;time&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;time&#62;</code></dfn> element represents a
+          specific period in time.
+        </p>
+        <figure>
+          <ul>
+            <li>Date: <time datetime="2022-06-10">June 10</time></li>
+            <li>Time: <time datetime="12:00">12:00</time></li>
+            <li>Duration: <time datetime="PT1H30M">1h 30m</time></li>
+          </ul>
+          <figcaption>
+            Some use-cases of the <code>&#60;time&#62;</code> attribute.
+          </figcaption>
+        </figure>
+        <p>
+          The <code>datetime</code> attribute can also be used with the
+          <code>&#60;time&#62;</code> element to provide a machine-readable
+          format for the date/time content of the
+          <code>&#60;time&#62;</code> element. This could then be used for some
+          other functionality, like search results or reminders.
+        </p>
+        <p>
+          Alternatively, omitting the <code>datetime</code> attribute from the
+          <code>&#60;time&#62;</code> element will result in the contents of the
+          element implicitly filling the attributes value. So if using the
+          element in this way, ensure that the contents are machine rereadable.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;u&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;u&#62;</code></dfn> element represent text that
+          should be rendered in a way that indicates a non-textual annotation.
+        </p>
+        <figure>
+          <p>This text has something spelt <u class="spelling">worng.</u></p>
+          <figcaption>
+            The <code>&#60;u&#62;</code> element being used to annotate
+            misspelled words.
+          </figcaption>
+        </figure>
+        <p>
+          Only use the element is the annotation is semantically meaningful. If
+          you are using it purely fo styling purposes, then use the
+          <code>&#60;span&#62;</code> element paired with CSS instead.
+        </p>
+        <p>
+          In most cases, you'll probably find that you shouldn't be using the
+          <code>&#60;u&#62;</code>
+          element. The use-case of using it to annotate misspelled text is valid
+          because there is semantic meaning to the annotation. If you cannot
+          give a similar reason for why you are using the
+          <code>&#60;u&#62;</code> element in your markup, then you probably
+          shouldn't be using it.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;var&#62;</code> element.</h2>
+        <p>
+          the <code>&#60;var&#62;</code> element represents the name of a
+          variable in a mathematical or programming context.
+        </p>
+        <figure>
+          <p>
+            <code>const <var>something</var> = 'something';</code>
+          </p>
+          <figcaption>
+            The <dfn><code>&#60;var&#62;</code></dfn> element being used to
+            represent a variable in a javascript constant declaration.
+          </figcaption>
+        </figure>
+        <p>
+          Similarly with other inline text semantics, if the
+          <code>&#60;var&#62;</code> element is being used for its styling
+          output, then it is being used wrong, and in situations like that, the
+          <code>&#60;span&#62;</code> element should be used.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;wbr&#62;</code> element.</h2>
+        <p>
+          the <dfn><code>&#60;wbr&#62;</code></dfn> element represents a
+          position in text where the browser may optionally break a line.
+        </p>
+        <p>
+          a brilliant example of the <code>&#60;wbr&#62;</code> element would be in a URL, where you may use it avoid
+          leaving a punctuation mark at the end of a line, which may be
+          mistaken by a human reader to be the end of the URL.
+        </p>
+        <figure>
+          <p>
+            <p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+          </p>
+          <figcaption>
+            A <code>&#60;wbr&#62;</code> element use-case example.
+          </figcaption>
+        </figure>
+      </section>
     </main>
     <hr />
     <footer>
@@ -937,6 +1257,6 @@
         <a href="tel:07903699493">07903699493</a>
       </address>
     </footer>
-    <script type="text/javascript" src="/element-test.js"></script>
+    <script type="text/javascript" src="element-test.js"></script>
   </body>
 </html>
