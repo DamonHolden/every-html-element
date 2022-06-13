@@ -64,6 +64,10 @@ const elements = [
   'u',
   'var',
   'wbr',
+  'area',
+  'audio',
+  'image',
+  'map',
 ];
 
 for (element of elements) {

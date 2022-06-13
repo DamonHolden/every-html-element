@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <base target="_self"/>
+    <base target="_self" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Every HTML Element</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicons/manifest.json" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
       p,
@@ -1234,18 +1248,117 @@
           position in text where the browser may optionally break a line.
         </p>
         <p>
-          a brilliant example of the <code>&#60;wbr&#62;</code> element would be in a URL, where you may use it avoid
-          leaving a punctuation mark at the end of a line, which may be
-          mistaken by a human reader to be the end of the URL.
+          a brilliant example of the <code>&#60;wbr&#62;</code> element would be
+          in a URL, where you may use it avoid leaving a punctuation mark at the
+          end of a line, which may be mistaken by a human reader to be the end
+          of the URL.
         </p>
         <figure>
           <p>
-            <p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+            http://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages
           </p>
           <figcaption>
             A <code>&#60;wbr&#62;</code> element use-case example.
           </figcaption>
         </figure>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;img&#62;</code> element.</h2>
+        <p>
+          The <dfn><code>&#60;img&#62;</code></dfn> element simply embeds an
+          image in the document.
+        </p>
+        <figure>
+          <img
+            src="https://cdn.shopify.com/s/files/1/0034/2913/8545/articles/7_panda_facts.jpg?v=1552558072"
+            alt="sleepy panda"
+            width="400px"
+          />
+          <figcaption>
+            A very sleepy panda, but also a use-case example of the
+            <code>&#60;img&#62;</code> element
+          </figcaption>
+        </figure>
+        <p>
+          The <code>src</code> attribute of an
+          <code>&#60;img&#62;</code> element contains the path to the image, and
+          is a required attribute of the element.
+        </p>
+        <p>
+          The <code>alt</code> attribute of the
+          <code>&#60;img&#62;</code> element provides a text description of the
+          image. While not mandatory, it is really useful to utilise this
+          attribute as not only will it render something if the image fails to
+          load, it is also typically read by screen reading technology.
+        </p>
+        <p>
+          One of the more interesting things I found when researching about the
+          <code>&#60;img&#62;</code> element were the supported image formats.
+          From reading The HTML standards, there doesn't appear to be much
+          commentary on what best practices are around image formats. However,
+          the MDN documentation includes a very well-put-together
+          <a
+            target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types"
+            >Image and file type guide (opens in new tab)</a
+          >.
+        </p>
+        <p>
+          Aside from what is mentioned in this section about the
+          <code>&#60;img&#62;</code> element, there is plenty more information
+          on the element itself and more-generally the subject of the
+          utilisation of images on the web. It is definitely worth looking into
+          as you will most likely be working with images in your web-projects a
+          lot.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;video&#62;</code> element.</h2>
+        <p>
+          The
+          <dfn><code>&#60;video&#62;</code></dfn> element embeds a media player
+          into the document.
+        </p>
+        <figure>
+          <video
+            controls
+            crossorigin="anonymous"
+            width="700px"
+            src="videos/duck.mp4"
+          >
+            Sorry, it looks your browser doesn't support embedded videos.
+          </video>
+          <figcaption>
+            <code>&#60;video&#62;</code> element use-case example with default
+            controls attribute
+          </figcaption>
+        </figure>
+        <p>
+          The <code>&#60;video&#62;</code> element can also be used to play
+          audio, but the <code>&#60;audio&#62;</code> element is better suited
+          for this.
+        </p>
+        <p>
+          Just like the <code>&#60;img&#62;</code> element, their is a lot of
+          documentation surrounding the <code>&#60;video&#62;</code> element and
+          its usage. I'll leave it at the basic-level here, but a good place to
+          start diving deeper is
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"
+            >MDN's video and audio content tutorial</a
+          >.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;area&#62;</code> element.</h2>
+        <p>
+          The <dfn><code>&#60;area&#62;</code></dfn> element defines an area
+          inside an image map that has clickable areas..
+        </p>
+        <p>The</p>
       </section>
     </main>
     <hr />
