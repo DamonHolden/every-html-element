@@ -1353,12 +1353,140 @@
       </section>
       <hr />
       <section>
-        <h2>The <code>&#60;area&#62;</code> element.</h2>
+        <h2>The <code>&#60;audio&#62;</code> element</h2>
         <p>
-          The <dfn><code>&#60;area&#62;</code></dfn> element defines an area
-          inside an image map that has clickable areas..
+          The <dfn><code>&#60;audio&#62;</code></dfn> element is used to embed
+          sound content in a document.
         </p>
-        <p>The</p>
+        <figure>
+          <audio controls src="audio/quack.mp3">A duck quacking</audio>
+          <figcaption>
+            An <code>&#60;audio&#62;</code> element example with default
+            controls.
+          </figcaption>
+        </figure>
+        <p>
+          Again, media elements can get be complex in their functionality and
+          behavior. While this document provides a basic overview,
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"
+            >MDN's video and audio content tutorial</a
+          >
+          is a good place to start delving deeper into the
+          <code>&#60;audio&#62;</code> element.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>The <code>&#60;track&#62;</code> element</h2>
+        <p>
+          The <dfn><code>&#60;track&#62;</code></dfn> element is used as a child
+          of the <code>&#60;video&#62;</code> and
+          <code>&#60;audio&#62;</code> elements. It allows you to specify time
+          based data for the parent media element.
+        </p>
+        <figure>
+          <video controls width="600px" src="videos/this-is-the-way.mp4">
+            <track
+              default
+              kind="captions"
+              srclang="en"
+              src="this-is-the-way.vtt"
+            />
+            Sorry, it looks your browser doesn't support embedded videos.
+          </video>
+          <figcaption>
+            An example of the <code>&#60;track&#62;</code> element being used to
+            provide captions to a video.
+          </figcaption>
+        </figure>
+
+        <p>
+          The time based data used in a <code>&#60;track&#62;</code> element is
+          formatted in <abbr title="Web Video Text Tracks">WebVTT</abbr>.
+        </p>
+        <figure>
+          <pre><code>WEBVTT
+
+00:00:00.600 --> 00:00:01.600 line:80%
+This is the way
+
+00:00:02.000 --> 00:00:03.000 line:80%
+This is the way
+
+00:00:04.000 --> 00:00:05.000 line:80%
+This is the way</code></pre>
+          <figcaption>
+            An example of a
+            <abbr title="Web Video Text Tracks">WebVTT</abbr> formatted file.
+          </figcaption>
+        </figure>
+        <p>
+          The <code>&#60;track&#62;</code> element can be used to provide
+          subtitles, captions, descriptions, chapters, and other metadata to the
+          targeted media.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>
+          The <code>&#60;map&#62;</code> and
+          <code>&#60;area&#62;</code> elements
+        </h2>
+        <p>
+          the <dfn><code>&#60;map&#62;</code></dfn> element is used to define an
+          image map (an image with clickable link areas).
+        </p>
+        <p>
+          The <dfn><code>&#60;area&#62;</code></dfn> element defines a clickable
+          area inside an image map.
+        </p>
+        <figure>
+          <map name="image-map">
+            <area
+              shape="poly"
+              coords="130,147,200,107,254,219,130,228"
+              href="https://developer.mozilla.org/docs/Web/HTML"
+              target="_blank"
+              alt="HTML"
+            />
+            <area
+              shape="poly"
+              coords="130,147,130,228,6,219,59,107"
+              href="https://developer.mozilla.org/docs/Web/CSS"
+              target="_blank"
+              alt="CSS"
+            />
+            <area
+              shape="poly"
+              coords="130,147,200,107,130,4,59,107"
+              href="https://developer.mozilla.org/docs/Web/JavaScript"
+              target="_blank"
+              alt="HTML"
+            />
+          </map>
+          <img
+            width="260px"
+            usemap="#image-map"
+            src="images/image-map.png"
+            alt="image map example"
+          />
+          <figcaption>
+            An example of an image-map using the
+            <code>&#60;map&#62;</code> and <code>&#60;area&#62;</code> elements
+          </figcaption>
+        </figure>
+        <p>
+          A <code>&#60;map&#62;</code> element must include the
+          <code>name</code> attribute, which provides a reference to the
+          <code>&#60;map&#62;</code> element which an
+          <code>&#60;img&#62;</code> element can use to apply the map to itself.
+        </p>
+        <p>
+          The <code>shape</code> and <code>coords</code> attributes are used in
+          an <code>&#60;area&#62;</code> element to specify the dimensions of a
+          clickable-area within an image-map
+        </p>
       </section>
     </main>
     <hr />

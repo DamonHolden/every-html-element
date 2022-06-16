@@ -68,6 +68,8 @@ const elements = [
   'audio',
   'image',
   'map',
+  'track',
+  'video',
 ];
 
 for (element of elements) {
